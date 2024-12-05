@@ -11,7 +11,7 @@ const TextComponent: React.FC = () => {
         if (event.key === "Enter" && value.trim()) {
             if (value.length > 20) {
                 alert("Todo 내용은 20자 이내로 작성해야 합니다.");
-                return false;
+                return;
             }
 
            else {
