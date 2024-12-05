@@ -3,7 +3,7 @@
 #/.pnp.*
 
 .idea
-.next
+#.next
 node_modules
 
 # dist folder
