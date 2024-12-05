@@ -1,0 +1,134 @@
+@import "src/styles/colors.scss";
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+/* 미디어쿼리 구간 */
+@media (max-width: 1200px) {
+  html, body {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html, body {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: $bg-color;
+  padding: 8rem 1.25rem 13rem;
+  &> * {
+    width: 100%;
+    max-width: 737px;
+  }
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  input.addTodo {
+    margin-top: 4rem;
+    background-color: $input-bg;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    outline: none;
+    border: none;
+    color: $font-color;
+    &::placeholder {
+      color: $place-holder;
+    }
+  }
+  .contents {
+
+    margin-top: 2rem;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-color: $content-box-color;
+    dl {
+      display: flex;
+      flex-direction: column;
+      dt {
+        ul.tabs {
+          display: flex;
+          justify-content: center;
+          gap: 0;
+          li {
+            button {
+              width: 6.75rem;
+              border-radius: 0.75rem;
+              padding: 0.5rem 0;
+              background: none;
+              border: none;
+              color: #454545;
+              font-weight: 600;
+              font-size: 1rem;
+              line-height: 1.5rem;
+              &.is-active {
+                background-color: $active-tab-bg;
+                color: $active-tab-color;
+              }
+            }
+          }
+        }
+      }
+      dd {
+        span.count {
+          padding: 1rem;
+        }
+        ul {
+          li {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 2rem 1rem;
+            .label-box {
+              label {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                justify-content: stretch;
+              }
+              .fake-checkbox {
+                display: block;
+                width: 2rem;
+                height: 2rem;
+                border: 1px solid $input-bg;
+                border-radius: 50%;
+                background-size: 1.25rem;
+                background-position: center;
+                background-repeat: no-repeat;
+                fill: #ffffff;
+              }
+            }
+            button.btn-close {
+              display: block;
+              width: 1.5rem;
+              height: 1.5rem;
+              margin-left: auto;
+              border: none;
+              background-color: transparent;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
